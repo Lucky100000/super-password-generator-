@@ -91,7 +91,25 @@ void generate_password(int length)
             count_number++;
             count++;
             break;
+            
+            case 4:
 
+            
+            if ((count_s_symbol == 1) && (count_alphabet == 0 || count_alphabet == 1 || count_ALPHABET == 0 || count_ALPHABET == 1 || count_number == 0))
+
+                break;
+
+            key = getKey();
+
+            key = key % 6;
+
+            password = password + s_symbol[key];
+
+            count_s_symbol++;
+
+            count++;
+
+            break;
         
         }
     }
